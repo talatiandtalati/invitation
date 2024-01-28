@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;900&family=Space+Grotesk:wght@300&display=swap');
+
+
+.jigsaw-puzzle {
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    border: 1px solid #fff;
+    backdrop-filter: blur(10px)
+}
+
+.jigsaw-puzzle__piece{
+   filter: grayscale(1);
+}
+.jigsaw-puzzle__piece--solved{
+    filter: grayscale(0);
+}
