@@ -1,38 +1,31 @@
-import React from "react";
+import {useEffect, useRef} from "react";
 import video from "./assets/invitation.mp4";
 import MobVideo from "./assets/invitationMobile.mp4";
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
 const InvitationCard = () => {
+  const v=useRef(null)
   const controls = useAnimationControls();
   const isDesktopOrLaptop = useMediaQuery({
     query: "(max-width: 640px)",
   });
+  useEffect(()=>{
+      v.current.play();
+  },[])
   return (
     <div className="w-full h-full">
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
-    <video class="video-js" playsinline autoplay muted>
-        <source src=${
-          isDesktopOrLaptop
-            ? "./assets/invitationMobile.mp4"
-            : "./assets/invitation.mp4"
-        } type="video/mp4"/>
-    </video>`,
-        }}
-      />
-      {/* <video
-        autoPlay
+  
+      <video
+        ref={v}
         muted
-        playsinline
         className="sm:w-full w-screen h-full object-cover"
         onEnded={() => controls.start({ opacity: 1, scale: 1 })}
+        src={isDesktopOrLaptop ? MobVideo : video}
+        type="video/mp4"
       >
-        <source src={isDesktopOrLaptop ? MobVideo : video} type="video/mp4" />
         Your browser does not support the video tag.
-      </video> */}
+      </video>
       <div className="w-full h-full absolute top-0 left-0 flex justify-center items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
