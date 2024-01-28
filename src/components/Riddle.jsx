@@ -1,22 +1,21 @@
 import { useState } from "react";
 
-const Riddle = ({ setFlag,setLoading,setGreetingText }) => {
+const Riddle = ({ setFlag, setLoading, setGreetingText }) => {
   const [ans, setAns] = useState("");
   const handleSubmit = () => {
     if (
       ans === "कागज" ||
       ans.toLowerCase() === "paper" ||
-      ans.toLowerCase() === "kagaj"
+      ans.toLowerCase() === "kagaj" ||
+      ans.toLowerCase() === "kagaz"
     ) {
       setLoading(true);
-      setGreetingText("स्वागत है आपका दूसरे और अंतिम पड़ाव  में")
-      setTimeout(()=>{
+      setGreetingText("स्वागत है आपका दूसरे और अंतिम पड़ाव  में");
+      setTimeout(() => {
         setFlag(true);
         setLoading(false);
-      setGreetingText("")
-
-
-      },5000)
+        setGreetingText("");
+      }, 5000);
     }
   };
   return (
