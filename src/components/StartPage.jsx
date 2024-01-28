@@ -5,7 +5,7 @@ import Cycling from "./assets/Road cycling.png";
 const StartPage = () => {
   return (
     <div className="w-full h-screen">
-      <div className="w-[70vh] h-[70vh] absolute  translate-x-[-50%] translate-y-[-50%] top-[60%] left-[50%]">
+      <div className="sm:w-[70vh] sm:h-[70vh] w-[40vh] h-[40vh] absolute  translate-x-[-50%] translate-y-[-50%] top-[60%] left-[50%]">
         <img className="w-full h-full" src={Cycling} alt="" />
       </div>
       <div className="w-full h-full flex flex-col items-center justify-between relative z-20 pt-24 pb-24">

@@ -7,7 +7,7 @@ import InvitationCard from "./components/InvitationCard";
 
 function App() {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+    <div className="w-full h-screen flex justify-center items-center fixed">
       <Routes>
         <Route element={<StartPage />} path="/" />
         <Route element={<QuizePage />} path="/puzzle" />

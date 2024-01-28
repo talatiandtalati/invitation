@@ -23,7 +23,7 @@ const Puzzle = ({ setFlag,setLoading,setGreetingText }) => {
       },5000)
     };
   return (
-    <div className="w-[80vh] h-[80vh] rounded-xl p-4 flex flex-col items-center justify-center">
+    <div className="sm:w-[80vh] h-[80vh] w-full rounded-xl p-4 flex flex-col items-center justify-center">
       {
         isDesktopOrLaptop?  <JigsawPuzzle
         imageSrc={MobileImg}
