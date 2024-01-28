@@ -4,7 +4,7 @@ import Celebration from './assets/Celebration-bro.png'
 
 const NextLevel = ({text}) => {
   return (
-    <div className="w-full h-full absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] flex items-center justify-center">
+    <div className="w-full h-full absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] flex items-center justify-center p-4">
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -12,8 +12,8 @@ const NextLevel = ({text}) => {
       className="bg-white w-full h-full rounded-lg flex items-center justify-center flex-col"
     >
 
-         <h1 className="text-bold text-5xl">{text}</h1>
-         <div className="sm:w-[70vh] w-[50vh] sm:h-[70vh] h-[50vh]">
+         <h1 className="text-bold sm:text-5xl text-3xl text-center">{text}</h1>
+         <div className="sm:w-[70vh] w-[40vh] sm:h-[70vh] h-[40vh]">
         <img className="w-full h-full" src={Celebration} alt="" />
       </div>
 

@@ -9,7 +9,7 @@ const Riddle = ({ setFlag,setLoading,setGreetingText }) => {
       ans.toLowerCase() === "kagaj"
     ) {
       setLoading(true);
-      setGreetingText("दूसरा और अंतिम पड़ाव")
+      setGreetingText("स्वागत है आपका दूसरे और अंतिम पड़ाव  में")
       setTimeout(()=>{
         setFlag(true);
         setLoading(false);
