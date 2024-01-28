@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Riddle = ({ setFlag, setLoading, setGreetingText }) => {
   const [ans, setAns] = useState("");
@@ -16,10 +17,13 @@ const Riddle = ({ setFlag, setLoading, setGreetingText }) => {
         setLoading(false);
         setGreetingText("");
       }, 5000);
+    }else{
+      toast.error("गलत जवाब, पुनः प्रयास कीजिए")
     }
   };
   return (
     <div className="w-[60vh] h-[60vh] backdrop-blur-lg rounded-xl border border-white p-4  relative">
+       <ToastContainer />
       <div className="w-full h-full flex flex-col items-center justify-center">
         <h1 className="text-xl font-extrabold text-[#4D3006] mb-16 relative">
           बूझो तो जाने{" "}
