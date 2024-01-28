@@ -1,6 +1,6 @@
 import React from "react";
-import video from "./assets/invitation.webm";
-import MobVideo from './assets/invitationMobile.webm'
+import video from "./assets/invitation.mp4";
+import MobVideo from './assets/invitationMobile.mp4'
 import { motion,useAnimationControls } from "framer-motion";
 import { useMediaQuery } from 'react-responsive';
 
