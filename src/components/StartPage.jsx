@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Cycling from "./assets/Road cycling.png";
+import Cycling from "./assets/Road cycling.webp";
 
 const StartPage = () => {
   return (

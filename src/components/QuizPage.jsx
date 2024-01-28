@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
-import picnic from "./assets/picnic1.jpg";
-import picnicMob from "./assets/picnicMob1.jpg";
+import picnic from "./assets/picnic1.webp";
+import picnicMob from "./assets/picnicMob1.webp";
 import Puzzle from "./Puzzle";
 import Riddle from "./Riddle";
 import { useMediaQuery } from "react-responsive";

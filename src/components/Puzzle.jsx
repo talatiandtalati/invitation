@@ -1,8 +1,8 @@
 import React from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
-import img from './assets/puzzle.jpeg';
-import MobileImg from './assets/puzzleMobile.jpeg'
+import img from './assets/puzzle.webp';
+import MobileImg from './assets/puzzleMobile.webp'
 import { useNavigate } from "react-router-dom";
 
 import { useMediaQuery } from 'react-responsive'

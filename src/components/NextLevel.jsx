@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Celebration from './assets/Celebration-bro.png'
+import Celebration from './assets/Celebration-bro.webp'
 
 const NextLevel = ({text}) => {
   return (

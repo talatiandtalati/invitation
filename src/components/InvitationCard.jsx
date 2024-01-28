@@ -1,6 +1,6 @@
 import React from "react";
-import video from "./assets/invitation.mp4";
-import MobVideo from './assets/invitationMobile.mp4'
+import video from "./assets/invitation.webm";
+import MobVideo from './assets/invitationMobile.webm'
 import { motion,useAnimationControls } from "framer-motion";
 import { useMediaQuery } from 'react-responsive';
 
@@ -12,7 +12,7 @@ const InvitationCard = () => {
   })
   return (
     <div className="w-full h-full">
-      <video autoPlay muted className="sm:w-full w-screen h-full object-cover" onEnded={()=>controls.start({ opacity: 1, scale: 1 })}>
+      <video autoPlay muted playsinline className="sm:w-full w-screen h-full object-cover" onEnded={()=>controls.start({ opacity: 1, scale: 1 })}>
         <source src={isDesktopOrLaptop?MobVideo:video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
