@@ -1,27 +1,43 @@
 import React from "react";
 import video from "./assets/invitation.mp4";
-import MobVideo from './assets/invitationMobile.mp4'
-import { motion,useAnimationControls } from "framer-motion";
-import { useMediaQuery } from 'react-responsive';
-
+import MobVideo from "./assets/invitationMobile.mp4";
+import { motion, useAnimationControls } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const InvitationCard = () => {
-  const controls = useAnimationControls()
+  const controls = useAnimationControls();
   const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 640px)'
-  })
+    query: "(max-width: 640px)",
+  });
   return (
     <div className="w-full h-full">
-      <video autoPlay muted playsinline className="sm:w-full w-screen h-full object-cover" onEnded={()=>controls.start({ opacity: 1, scale: 1 })}>
-        <source src={isDesktopOrLaptop?MobVideo:video} type="video/mp4" />
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+    <video class="video-js" playsinline autoplay muted>
+        <source src=${
+          isDesktopOrLaptop
+            ? "./assets/invitationMobile.mp4"
+            : "./assets/invitation.mp4"
+        } type="video/mp4"/>
+    </video>`,
+        }}
+      />
+      {/* <video
+        autoPlay
+        muted
+        playsinline
+        className="sm:w-full w-screen h-full object-cover"
+        onEnded={() => controls.start({ opacity: 1, scale: 1 })}
+      >
+        <source src={isDesktopOrLaptop ? MobVideo : video} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       <div className="w-full h-full absolute top-0 left-0 flex justify-center items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={controls}
-          
-          transition={{ duration: 0.5}}
+          transition={{ duration: 0.5 }}
           className=" sm:w-[80%] w-[70%] sm:h-[65vh] h-[60vh] flex flex-col items-center "
         >
           <h1 className="sm:text-5xl text-2xl font-bold relative sm:mb-20 mb-8 text-[#1C110D]">
@@ -46,7 +62,6 @@ const InvitationCard = () => {
             विनयावनत <br /> समस्त आर्टिकल्स, प्रथम वर्ष, <br />
             तलाटी एंड तलाटी
           </h6>
-       
         </motion.div>
       </div>
     </div>
