@@ -14,7 +14,11 @@ const InvitationCard = () => {
   });
   useEffect(() => {
     v.current.play();
-    setName(data[JSON.parse(localStorage.getItem('email'))].name)
+    if(data[JSON.parse(localStorage.getItem('email'))] && data[JSON.parse(localStorage.getItem('email'))].name){
+      setName(data[JSON.parse(localStorage.getItem('email'))].name)
+    }else{
+      setName("तलाटी एंड तलाटी")
+    }
   }, []);
   return (
     <div className="w-full h-full">
