@@ -4,8 +4,16 @@ import StartPage from "./components/StartPage";
 import QuizePage from "./components/QuizPage";
 import { Route, Routes } from "react-router-dom";
 import InvitationCard from "./components/InvitationCard";
+import { useSearchParams } from "react-router-dom";
 
 function App() {
+  let [searchParams, setSearchParams] = useSearchParams();
+  useEffect(()=>{
+     if(searchParams.get('email')){
+      localStorage.setItem('email', JSON.stringify(searchParams.get('email')));
+
+     }
+  },[])
   return (
     <div className="w-full h-screen flex justify-center items-center fixed">
       <Routes>

@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef,useState } from "react";
 import video from "./assets/invitation.mp4";
 import MobVideo from "./assets/invitationMobile.mp4";
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import data from './data.json'
 
 const InvitationCard = () => {
+  const [name,setName]=useState("")
   const v = useRef(null);
   const controls = useAnimationControls();
   const isDesktopOrLaptop = useMediaQuery({
@@ -12,6 +14,7 @@ const InvitationCard = () => {
   });
   useEffect(() => {
     v.current.play();
+    setName(data[JSON.parse(localStorage.getItem('email'))].name)
   }, []);
   return (
     <div className="w-full h-full">
@@ -37,7 +40,7 @@ const InvitationCard = () => {
             <span className="inline-block w-full bg-[#1C110D] h-[0.1em] absolute bottom-[-15%] left-0"></span>
           </h1>
           <p className="text-center sm:text-4xl text-lg leading-6 sm:leading-[2.8rem] sm:mb-12 mb-4 text-[#563F2F] sm:font-normal font-bold ">
-            सम्माननीय पार्टनर्स, तलाटी एंड तलाटी, <br />
+            सम्माननीय पार्टनर्स, {(name)?`${name},`:""} <br />
             समस्त प्रथम वर्ष के आर्टिकल्स की ओर से आयोजित उक्त स्नेह मिलन <br />
             कार्यक्रम में आप सपरिवार सादर आमंत्रित हैं। <br />
             कृपया, पधारकर हमें अनुगृहीत करें।
