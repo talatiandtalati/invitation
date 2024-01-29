@@ -1,6 +1,7 @@
 import { useEffect, useRef,useState } from "react";
 import video from "./assets/invitation.mp4";
 import VideoWebM from "./assets/invitation .webm";
+import InvitationImage from "./assets/invitationPaper.png"
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import data from './data.json'
@@ -13,7 +14,11 @@ const InvitationCard = () => {
     query: "(max-width: 640px)",
   });
   useEffect(() => {
-    v.current.play();
+    if(v.current){
+      v.current.play()
+    }else{
+      controls.start({ opacity: 1, scale: 1 })
+    }
     if(data[JSON.parse(localStorage.getItem('email'))] && data[JSON.parse(localStorage.getItem('email'))].name){
       setName(data[JSON.parse(localStorage.getItem('email'))].name)
     }else{
@@ -22,18 +27,33 @@ const InvitationCard = () => {
   }, []);
   return (
     <div className="w-full h-full">
+      {/* {
+        isDesktopOrLaptop?<div className="w-full h-screen "><img className="w-full h-full object-cover" src={InvitationImage } alt="" /></div>: <video
+        ref={v}
+        autoPlay
+        className="sm:w-full w-screen h-full object-cover"
+        onEnded={() => controls.start({ opacity: 1, scale: 1 })}
+        muted 
+        playsInline
+      >
+         <source src={video} type="video/mp4"/>
+         <source src={VideoWebM} type="video/webm"/>
+        Your browser does not support the video tag.
+      </video>
+      } */}
       <video
         ref={v}
         autoPlay
         className="sm:w-full w-screen h-full object-cover"
         onEnded={() => controls.start({ opacity: 1, scale: 1 })}
         muted 
-        controls
+        playsInline
       >
          <source src={video} type="video/mp4"/>
          <source src={VideoWebM} type="video/webm"/>
         Your browser does not support the video tag.
       </video>
+     
       <div className="w-full h-full absolute top-0 left-0 flex justify-center items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
