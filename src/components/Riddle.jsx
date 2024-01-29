@@ -50,7 +50,7 @@ const Riddle = ({ setFlag, setLoading, setGreetingText }) => {
         >
           SUBMIT
         </button>
-        <button className="absolute left-[10%] bottom-[10%] font-bold text-white" onClick={()=>{toast("आपका उत्तर दूसरे और तीसरे पंक्ति मै है")}}>HINT : </button>
+        <button className="absolute left-[10%] bottom-[10%] font-bold text-white" onClick={()=>{toast("आपका उत्तर दूसरी और तीसरी पंक्ति मै है")}}>HINT : </button>
       </div>
       {/* <div className="w-full h-full absolute left-0 top-0">
         <img className="w-full h-full" src={confetti} alt="" />

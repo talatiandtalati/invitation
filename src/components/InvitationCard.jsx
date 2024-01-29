@@ -83,7 +83,7 @@ const InvitationCard = () => {
             समस्त प्रथम वर्ष के आर्टिकल्स की ओर <br />
             से आयोजित उक्त स्नेह मिलन <br />
             कार्यक्रम में आप सपरिवार सादर आमंत्रित हैं। <br />
-            कृपया, पधारकर हमें अनुगृहीत करें।
+            कृपया पधारकर हमें अनुगृहीत करें।
           </p>
           <div className="w-[20vmin] h-[0.01em] bg-[#563F2F] mb-2"></div>
           <h5 className="text-center sm:text-2xl text-sm sm:mb-8 mb-4 text-[#513A2E] font-bold">
