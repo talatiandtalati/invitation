@@ -25,7 +25,7 @@ const Riddle = ({ setFlag, setLoading, setGreetingText }) => {
     <div className="sm:w-[60vh] w-full h-[60vh] backdrop-blur-lg rounded-xl border border-white p-4  relative">
        <ToastContainer />
       <div className="w-full h-full flex flex-col items-center justify-center">
-        <h1 className="text-xl font-extrabold text-[#4D3006] mb-16 relative">
+        <h1 className="sm:text-xl text-2xl font-extrabold text-[#4D3006] mb-16 relative">
           बूझो तो जाने{" "}
           <span className="inline-block w-full bg-[#1C110D] h-[0.1em] absolute bottom-[-20%] left-0"></span>
         </h1>
@@ -50,6 +50,7 @@ const Riddle = ({ setFlag, setLoading, setGreetingText }) => {
         >
           SUBMIT
         </button>
+        <button className="absolute left-[10%] bottom-[10%] font-bold text-white" onClick={()=>{toast("आपका उत्तर दूसरे और तीसरे पंक्ति मै है")}}>HINT : </button>
       </div>
       {/* <div className="w-full h-full absolute left-0 top-0">
         <img className="w-full h-full" src={confetti} alt="" />
