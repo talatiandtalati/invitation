@@ -78,7 +78,7 @@ const InvitationCard = () => {
           </h1>
           <p className="text-center sm:text-4xl text-base leading-6 sm:leading-[2.8rem] sm:mb-12 mb-4 text-[#563F2F] sm:font-normal font-bold ">
             सम्माननीय{" "}
-            <span className="font-bold">{name ? `${name} जी ,` : ""}</span>{" "}
+            <span className="font-bold">{name ? `${name},` : ""}</span>{" "}
             <br />
             समस्त प्रथम वर्ष के आर्टिकल्स की ओर <br />
             से आयोजित उक्त स्नेह मिलन <br />
