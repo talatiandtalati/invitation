@@ -33,8 +33,9 @@ const QuizPage = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className="w-full h-screen flex items-center sm:justify-end justify-center sm:pr-12 pr-0 fixed"
+      className="w-full h-screen flex items-center sm:justify-end justify-center sm:pr-12 pr-0 fixed touch-none"
     >
+      
       {flag ? (
         <Puzzle setFlag={setFlag} setLoading={setLoading} setGreetingText={setGreetingText}/>
       ) : (

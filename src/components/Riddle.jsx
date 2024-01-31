@@ -23,6 +23,7 @@ const Riddle = ({ setFlag, setLoading, setGreetingText }) => {
   };
   return (
     <div className="sm:w-[60vh] w-full h-[60vh] backdrop-blur-lg rounded-xl border border-white p-4  relative">
+      <button className="rounded-2xl border-none text-white bg-[#00000049] px-4 py-2 absolute" onClick={()=>{setFlag(true)}}>Skip</button>
        <ToastContainer />
       <div className="w-full h-full flex flex-col items-center justify-center">
         <h1 className="sm:text-xl text-2xl font-extrabold text-[#4D3006] mb-16 relative">

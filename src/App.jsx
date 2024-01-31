@@ -8,12 +8,18 @@ import { useSearchParams } from "react-router-dom";
 
 function App() {
   let [searchParams, setSearchParams] = useSearchParams();
+  function preventMotion(event) {
+    window.scrollTo(0, 0);
+    event.preventDefault();
+    event.stopPropagation();
+  }
   useEffect(()=>{
      if(searchParams.get('email')){
       localStorage.setItem('email', JSON.stringify(searchParams.get('email')));
 
      }
   },[])
+
   return (
     <div className="w-full h-screen flex justify-center items-center fixed">
       <Routes>
